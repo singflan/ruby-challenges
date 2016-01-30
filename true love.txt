@@ -1,0 +1,10 @@
+puts "Who is your one true love?"
+one_true_love = gets.chomp.downcase
+
+while (one_true_love == "julieta")
+	puts "Dustin & Julieta together forever for true love exists"
+	puts "Who is your one true love?"
+	one_true_love = gets.chomp.downcase
+end
+
+puts "Why did you stray from your true love?"

@@ -1,0 +1,25 @@
+class Country
+	
+	attr_accessor :capital_city :province
+		
+
+class Panama < Country
+
+	def panama_song
+		return "Panameno, Panamena, Panameno, vida mia..."
+	end
+	
+end
+	
+my_panama = Panama.new
+
+my_panama.set_capital_city = "Panama City"
+my_panama.set_province = "Chiriqui"
+
+capital_city = my_panama.get_capital_city
+best_province = my_panama.get_province
+
+puts "Panama is awesome! It's capital city is #{capital_city} and its best province is #{best_province}."
+puts "Here's a song about Panama: \"#{my_panama.panama_song}\""
+
+	
