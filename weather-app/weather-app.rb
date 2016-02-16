@@ -1,16 +1,17 @@
-require 'yahoo_weatherman'
+require 'weatherboy'
 
-puts "Please tell us your location:  "
+puts "Please tell us your location using your 5-digit zipcode:  "
 location = gets.chomp
-String weather
+
 def getWeather(location)
 	
-	client = Weatherman::Client.new
+	weatherboy = Weatherboy.new(location)
+	weath = weatherboy.current.weather
+	temp = weatherboy.current.temp_f.to_s
+	puts " The current weather is " + weath + " and the temperature is " + temp + "."
 
-	weather = client.lookup_by_location('#{location}').condition['text']
-
-	return weather
 end
 
-puts "The weather today in #{location} is #{weather}."
+getWeather(location)
+
 
